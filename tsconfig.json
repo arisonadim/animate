@@ -17,7 +17,16 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Path aliases */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "Assets/*": ["src/assets/*"],
+      "Images/*": ["src/assets/images/*"],
+      "Scss/*": ["src/scss/*"]
+    }
   },
   "include": ["src"]
 }
