@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .wrapper {
   position: fixed;
   bottom: 0;
@@ -9,8 +11,8 @@
 @keyframes noise-anim {
   $steps: 20;
   @for $i from 0 through $steps {
-    #{percentage($i * (1 / $steps))} {
-      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+    #{math.percentage($i * math.div(1, $steps))} {
+      clip: rect(math.random(100) + px, 9999px, math.random(100) + px, 0);
     }
   }
 }
@@ -18,8 +20,8 @@
 @keyframes noise-anim-2 {
   $steps: 20;
   @for $i from 0 through $steps {
-    #{percentage($i * (1 / $steps))} {
-      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+    #{math.percentage($i * math.div(1, $steps))} {
+      clip: rect(math.random(100) + px, 9999px, math.random(100) + px, 0);
     }
   }
 }
@@ -27,8 +29,8 @@
 @keyframes noise-anim-img {
   $steps: 20;
   @for $i from 0 through $steps {
-    #{percentage($i * (1 / $steps))} {
-      clip: rect(random(600) + px, 9999px, random(600) + px, 0);
+    #{math.percentage($i * math.div(1, $steps))} {
+      clip: rect(math.random(600) + px, 9999px, math.random(600) + px, 0);
     }
   }
 }
@@ -36,8 +38,8 @@
 @keyframes noise-anim-img-2 {
   $steps: 20;
   @for $i from 0 through $steps {
-    #{percentage($i * (1 / $steps))} {
-      clip: rect(random(600) + px, 9999px, random(600) + px, 0);
+    #{math.percentage($i * math.div(1, $steps))} {
+      clip: rect(math.random(600) + px, 9999px, math.random(600) + px, 0);
     }
   }
 }
